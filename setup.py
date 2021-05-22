@@ -1,12 +1,12 @@
 import setuptools
 
 setuptools.setup(
-	name="sts_utility",
-	version="0.0.1",
+	name="stsutility",
+	version="0.0.2",
 	author="636",
 	author_email="win.stitch.23@gmail.com",
 	description="636 Utility Package",
-	url="https://github.com/0187773933/sts-utility",
+	url="https://github.com/0187773933/stsutility",
 	packages=setuptools.find_packages(),
 	classifiers=[
 		"Programming Language :: Python :: 3",
@@ -21,4 +21,10 @@ install_requires = [
 	'pathlib',
 	'time',
 	'pint',
+	'math',
+	'decimal',
+	'operator',
+	'pandas',
+	'numpy',
+	'pprint',
 ]
