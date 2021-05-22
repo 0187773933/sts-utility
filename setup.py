@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
 	name="stsutility",
-	version="0.0.3",
+	version="0.0.4",
 	author="636",
 	author_email="win.stitch.23@gmail.com",
 	description="636 Utility Package",
@@ -14,17 +14,18 @@ setuptools.setup(
 		"Operating System :: OS Independent",
 	],
 	python_requires='>=3.6',
-	install_requires = [
+	setup_requires=['numpy','pandas'],
+	install_requires=[
 		'json',
 		'pathlib',
 		'time',
-		'pint',
+		'Pint',
 		'math',
 		'decimal',
 		'operator',
 		'pandas',
 		'numpy',
 		'pprint',
-	]
+	],
 )
 
