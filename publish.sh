@@ -23,7 +23,7 @@ git remote add origin git@github.com:0187773933/stsutility.git
 git push origin master
 
 currentversion=$(head -2 setup.py | tail -1 | awk -F '"' '{print $2}' | awk -F '.' '{print $3}')
-var=$((currentversion+1))
+currentversion=$((currentversion+1))
 echo "import setuptools
 VERSION='0.0.$currentversion'
 setuptools.setup(
