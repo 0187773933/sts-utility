@@ -20,7 +20,7 @@ fi
 git add .
 git commit -m "$NextCommitNumber"
 git remote add origin git@github.com:0187773933/stsutility.git
-gitresult=$(git push origin master | tail -n 1)
+gitresult=$(git push origin master | tail -1)
 echo $gitresult
 
 # currentversion=$(head -2 setup.py | tail -1 | awk -F "'" '{print $2}' | awk -F '.' '{print $3}')
