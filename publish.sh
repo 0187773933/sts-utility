@@ -32,7 +32,7 @@ setuptools.setup(
 	author='636',
 	author_email='win.stitch.23@gmail.com',
 	description='636 Utility Package',
-	url=https://github.com/0187773933/stsutility',
+	url='https://github.com/0187773933/stsutility',
 	packages=setuptools.find_packages(),
 	classifiers=[
 		'Programming Language :: Python :: 3',
