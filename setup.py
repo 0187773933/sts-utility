@@ -1,5 +1,5 @@
 import setuptools
-VERSION='0.0.'
+VERSION='0.0.6'
 setuptools.setup(
 	name='stsutility',
 	version=VERSION,

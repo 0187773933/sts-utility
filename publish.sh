@@ -22,41 +22,43 @@ git commit -m "$NextCommitNumber"
 git remote add origin git@github.com:0187773933/stsutility.git
 git push origin master
 
-currentversion=$(head -2 setup.py | tail -1 | awk -F '"' '{print $2}' | awk -F '.' '{print $3}')
-currentversion=$((currentversion+1))
-echo "import setuptools
-VERSION='0.0.$currentversion'
-setuptools.setup(
-	name='stsutility',
-	version=VERSION,
-	author='636',
-	author_email='win.stitch.23@gmail.com',
-	description='636 Utility Package',
-	url='https://github.com/0187773933/stsutility',
-	packages=setuptools.find_packages(),
-	classifiers=[
-		'Programming Language :: Python :: 3',
-		'License :: OSI Approved :: MIT License',
-	    'Operating System :: OS Independent',
-	],
-	python_requires='>=3.6',
-	setup_requires=['numpy','pandas','Pint'],
-	install_requires=[
-		'json',
-		'pathlib',
-		'time',
-		'Pint',
-		'math',
-		'decimal',
-		'operator',
-		'pandas',
-		'numpy',
-		'pprint',
-	],
-)
-" > setup.py
-rm -rf build
-rm -rf dist
-python3 setup.py sdist bdist_wheel
-#python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
-python3 -m twine upload dist/*
+# currentversion=$(head -2 setup.py | tail -1 | awk -F "'" '{print $2}' | awk -F '.' '{print $3}')
+# echo $currentversion
+# currentversion=$((currentversion+1))
+# echo $currentversion
+# echo "import setuptools
+# VERSION='0.0.$currentversion'
+# setuptools.setup(
+# 	name='stsutility',
+# 	version=VERSION,
+# 	author='636',
+# 	author_email='win.stitch.23@gmail.com',
+# 	description='636 Utility Package',
+# 	url='https://github.com/0187773933/stsutility',
+# 	packages=setuptools.find_packages(),
+# 	classifiers=[
+# 		'Programming Language :: Python :: 3',
+# 		'License :: OSI Approved :: MIT License',
+# 	    'Operating System :: OS Independent',
+# 	],
+# 	python_requires='>=3.6',
+# 	setup_requires=['numpy','pandas','Pint'],
+# 	install_requires=[
+# 		'json',
+# 		'pathlib',
+# 		'time',
+# 		'Pint',
+# 		'math',
+# 		'decimal',
+# 		'operator',
+# 		'pandas',
+# 		'numpy',
+# 		'pprint',
+# 	],
+# )
+# " > setup.py
+# rm -rf build
+# rm -rf dist
+# python3 setup.py sdist bdist_wheel
+# #python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+# python3 -m twine upload dist/*
